@@ -1,0 +1,8 @@
+<template>
+    <lightning-card title="Parent to Child" icon-name="custom:custom55">
+        <div class="slds-m-around_medium slds-p-aroun_small slds-box">
+            <lightning-input label="Enter something to show in child component" value={parentValue} onchange={handleChange}></lightning-input>
+            <c-child-cmp child-value={parentValue}></c-child-cmp>
+        </div>
+    </lightning-card>
+</template>

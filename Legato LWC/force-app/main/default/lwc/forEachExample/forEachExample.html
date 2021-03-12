@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Iteration Example" icon-name="custom:custom33">
+        <div class="slds-m-around_medium">
+            <template for:each={contacts} for:item="contact">
+                <div key={contact.Id}>
+                    <p><lightning-formatted-text value={contact.Name}></lightning-formatted-text></p>
+                    <p><lightning-formatted-text value={contact.Title}></lightning-formatted-text></p>
+                    <p><lightning-formatted-email value={contact.Email}></lightning-formatted-email></p>
+                    <br>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

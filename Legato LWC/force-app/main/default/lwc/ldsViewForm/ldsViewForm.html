@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Record View Form Dyanmic" icon-name="standard:contact">
+        <div class="slds-p-around_medium">
+            <lightning-record-view-form 
+                object-api-name={objectApiName}
+                record-id={recordId}>
+                <div class="slds-box slds-m-around_medium">
+                    <lightning-output-field field-name={accountField}></lightning-output-field>
+                    <lightning-output-field field-name={nameField}></lightning-output-field>
+                </div>
+                    <lightning-output-field field-name={titleField}></lightning-output-field>
+                    <lightning-output-field field-name={phoneField}></lightning-output-field>
+                    <lightning-output-field field-name={emailField}></lightning-output-field>
+            </lightning-record-view-form>
+        </div>
+    </lightning-card>
+</template>

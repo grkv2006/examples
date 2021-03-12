@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Enter Your Details" icon-name="custom:custom23">
+        <lightning-button variant="brand" label="Submit" onclick={handleClick} slot="actions"></lightning-button>
+        <div class="slds-m-around_medium">
+            <div class="slds-form-element">
+                <lightning-input label="Name :" value={name} onchange={handleChangeName}></lightning-input>
+                <lightning-input label="Phone :" value={phone} onchange={handleChangePhone}></lightning-input>
+                <lightning-input label="Email : " value={email} onchange={handleChangeEmail}></lightning-input>
+              </div>
+            <template if:true={isVisible}>
+                    <div class="slds-m-vertical_medium">
+                        <p><b>Your Details Are : </b></p>
+                        <p>Name: {name}</p>
+                        <p>Phone: {phone}</p>
+                        <p>Email: {email}</p>
+                    </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Child to Parent" icon-name="custom:custom42">
+        <div class="slds-m-around_medium">
+            <p class="slds-text-align_center slds-p-around_small">
+                Page {page}
+            </p>
+            <p class="slds-text-align_center slds-p-around_small">
+                {message}
+            </p>
+            <p class="slds-text-align_center slds-p-around_small">
+                {message1}
+            </p>
+        </div>
+        <c-event-simple class="slds-show slds-is-relative" onprevious={handPrev} onnext={handNext}>
+        </c-event-simple>
+    </lightning-card>
+</template>
