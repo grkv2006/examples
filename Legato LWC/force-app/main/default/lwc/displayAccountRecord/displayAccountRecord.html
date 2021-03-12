@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Account Record using Wired with Property" icon-name="standard:account">
+        <template for:each = {property.data} for:item="account">
+            <div key={account.Id} class="slds-has-divider_top slds-p-around_medium">
+                <b><p>{account.Name}</p></b>
+                <p>{account.Rating}</p>
+                <p>{account.Industry}</p>
+                <p>{account.AnnualRevenue}</p>
+            </div>
+        </template>
+    </lightning-card>
+</template>

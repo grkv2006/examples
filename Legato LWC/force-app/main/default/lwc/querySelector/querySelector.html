@@ -1,0 +1,15 @@
+<template>
+    <lightning-card class="slds-p-around_medium">
+        <lightning-record-edit-form 
+            object-api-name={objectApiName}
+            onsubmit={handleSubmit}
+            onsuccess={handleSuccess}>
+                    <lightning-input-field field-name="Name"></lightning-input-field>
+                    <lightning-input-field field-name="Industry"></lightning-input-field>
+                    <lightning-input-field field-name="Type"></lightning-input-field>
+                    <div class="slds-p-around_large">
+                        <lightning-button label="Save" variant="brand" type="submit"></lightning-button>
+                    </div>
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>
