@@ -5,6 +5,7 @@ import SAMPLE_MESSAGE from '@salesforce/messageChannel/record_msg__c';
 
 export default class publisherCmp extends LightningElement {
     msg;
+    msg2;
 
     @wire(MessageContext)
     messageContext;

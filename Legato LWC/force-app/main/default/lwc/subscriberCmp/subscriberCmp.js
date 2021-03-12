@@ -5,6 +5,7 @@ import SAMPLE_MESSAGE from '@salesforce/messageChannel/record_msg__c';
 export default class SubscriberLWC extends LightningElement {
 
     receivedMessage = '';
+    receivedMessage2 = '';
 
     @wire(MessageContext)
     messageContext;
