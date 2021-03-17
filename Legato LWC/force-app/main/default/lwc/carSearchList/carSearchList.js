@@ -71,5 +71,8 @@ export default class CarSearchList extends LightningElement {
     handleBookingEvent(event){
         this.carObject = event.detail;
         this.isOpen = true;
+
+        const modal = this.template.querySelector('c-modal-car-rental');
+        modal.show();
     }
 }

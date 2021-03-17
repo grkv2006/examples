@@ -17,7 +17,13 @@ public with sharing class CarInfoController {
     }
     return [SELECT Id, Name__c, Seater__c, Group__c, Transmission__c, Picture_URL__c, Charges_Per_Day__c
                         FROM Car_Info__c
-                        WHERE Seater__c LIKE :seater
+                        WHERE Id NOT IN 
+                        (SELECT Car_Info__c 
+                          FROM Car_Booking_Detail__c
+                          WHERE ((Start_Date__c <= :startDate AND End_Date__c >= :startDate) OR
+                          (Start_Date__c<= :endDate AND End_Date__c>= :endDate) OR
+                          (Start_Date__c > :startDate AND End_Date__c<= :endDate) ) )
+                        AND Seater__c LIKE :seater
                         AND Transmission__c LIKE :transmissionopt
                         AND Group__c LIKE :groupopt];
     }
